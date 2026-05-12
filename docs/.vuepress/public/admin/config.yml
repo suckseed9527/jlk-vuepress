@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway    # 通过 Netlify 进行身份验证
+  branch: main         # 指定需要更新的 Git 分支
+
+media_folder: "docs/.vuepress/public/images" # 图片上传后的存储路径（相对项目根目录）
+public_folder: "/images"                     # 图片在前端页面的访问路径
+
+collections:
+  - name: "docs"           # 集合名称，在 URL 和代码中会用到
+    label: "文档集合"       # 管理后台界面上显示的名称
+    folder: "docs"         # Markdown 文件存放的文件夹（相对于项目根目录）
+    create: true           # 是否允许在后台创建新文档
+    slug: "{{slug}}"       # 新文档的文件名格式
+    fields:                # 定义文档的 Front Matter 字段和正文
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "正文", name: "body", widget: "markdown"}
