@@ -8,6 +8,19 @@
 <body>
   <!-- 引入 Decap CMS 的核心 JS 文件 -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- 在你的根页面（如 index.html）的 <body> 末尾添加以下代码 -->
+  <script type="module">
+    import * as netlifyIdentity from '@netlify/identity';
+    // 初始化 Identity 实例（如果需要）
+    // netlifyIdentity.init();
+    
+    // 页面加载时调用，处理 URL 中的 token
+    netlifyIdentity.init();
+    netlifyIdentity.on('init', user => {
+      // 处理邀请等回调
+      netlifyIdentity.handleAuthCallback();
+    });
+  </script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </body>
 </html>
