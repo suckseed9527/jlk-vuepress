@@ -1,7 +1,7 @@
 ---
 title: DeepSeek API 官方文档
 ---
-# DeepSeek API 官方文档
+# DeepSeek API 官方文档66666
 
 > 本指南基于 [DeepSeek API 官方文档](https://api-docs.deepseek.com/zh-cn/) 整理，涵盖 API 接入、模型选择、API 调用、高级功能及常见问题等内容。
 
